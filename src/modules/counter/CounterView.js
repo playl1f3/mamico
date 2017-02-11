@@ -1,6 +1,7 @@
 import * as CounterState from './CounterState';
 import * as NavigationState from '../../modules/navigation/NavigationState';
 import React, {PropTypes} from 'react';
+import { Button } from 'react-native-elements'
 import {
   StyleSheet,
   TouchableOpacity,
@@ -89,6 +90,12 @@ const CounterView = React.createClass({
             {'I\'m bored!'}
           </Text>
         </TouchableOpacity>
+
+        <Button
+          raised
+          icon={{name: 'cached'}}
+          title='BUTTON WITH ICON' />
+
 
       </View>
     );
