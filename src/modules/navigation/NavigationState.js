@@ -41,14 +41,18 @@ const initialState = fromJS({
   tabs: {
     index: 0,
     routes: [
-      {key: 'CityTab', title: 'City'},
-      {key: 'ProfileTab', title: 'Profile'}
+      {key: 'HomeTab', title: 'Home', icon: 'home'},
+      {key: 'ProfileTab', title: 'Profiles', icon: 'account-box'}
     ]
   },
   // Scenes for the `CityTab` tab.
-  CityTab: {
+  // CityTab: {
+  //   index: 0,
+  //   routes: [{key: 'City', title: 'Choose a Citys'}]
+  // },
+  HomeTab: {
     index: 0,
-    routes: [{key: 'City', title: 'Choose a City'}]
+    routes: [{key: 'Home', title: 'Nidec'}]
   },
   // Scenes for the `LocationTab` tab.
   LocationTab: {
@@ -58,7 +62,11 @@ const initialState = fromJS({
   // Scenes for the `ProfileTab` tab.
   ProfileTab: {
     index: 0,
-    routes: [{key: 'Profile', title: 'Profile'}]
+    routes: [{key: 'Profile', title: 'Nidec'}]
+  },
+  DevicesTab: {
+    index: 0,
+    routes: [{key: 'Devices', title: 'Add Devices'}]
   }
 });
 

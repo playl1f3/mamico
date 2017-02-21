@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import * as theme from '../../utils/theme';
 
-const CounterView = React.createClass({
+const ProfileView = React.createClass({
   propTypes: {
     userName: PropTypes.string,
     userProfilePhoto: PropTypes.string
@@ -79,4 +79,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default CounterView;
+export default ProfileView;

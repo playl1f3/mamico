@@ -1,5 +1,5 @@
-import React, { PropTypes } from 'react';
-import { View, StyleSheet, ActivityIndicator, Image } from 'react-native';
+import React, {PropTypes} from 'react';
+import {View, StyleSheet, ActivityIndicator, Image} from 'react-native';
 import NavigationViewContainer from './navigation/NavigationViewContainer';
 import * as auth0 from '../services/auth0';
 import * as snapshotUtil from '../utils/snapshot';
@@ -68,9 +68,9 @@ const AppView = React.createClass({
     const MenuComponent = (
       <View style={{flex: 1, backgroundColor: '#ededed', paddingTop: 30}}>
         <View style={{backgroundColor: 'darkgrey', justifyContent: 'center', alignItems: 'center', alignSelf: 'center'}}>
-          <Image
+          {/*<Image
             source={src}
-            style={styles.logo} />
+            style={styles.logo} />*/}
         </View>
         <List containerStyle={{marginBottom: 20}}>
           {
@@ -100,7 +100,7 @@ const AppView = React.createClass({
 
     return (
       <SideMenu
-        isOpen={true}
+        isOpen={false}
         menu={MenuComponent}>
         <View style={{flex: 1}}>
           <NavigationViewContainer />

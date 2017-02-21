@@ -4,6 +4,9 @@ import {
   TouchableOpacity,
   StyleSheet
 } from 'react-native';
+import {
+  Icon
+} from 'react-native-elements';
 import * as theme from '../utils/theme';
 
 export default React.createClass({
@@ -11,7 +14,8 @@ export default React.createClass({
   propTypes: {
     text: PropTypes.string.isRequired,
     action: PropTypes.func.isRequired,
-    isSelected: PropTypes.bool.isRequired
+    isSelected: PropTypes.bool.isRequired,
+    icon: PropTypes.string.isRequired
   },
   render() {
     return (
@@ -19,6 +23,7 @@ export default React.createClass({
         onPress={this.props.action}
         style={[styles.button, this.props.isSelected && styles.selected]}
         >
+        <Icon name={this.props.icon}> </Icon>
         <Text
           style={[styles.text, this.props.isSelected && styles.selectedText]}
         >

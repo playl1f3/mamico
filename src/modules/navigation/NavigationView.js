@@ -24,12 +24,14 @@ const NavigationView = React.createClass({
       tabs: PropTypes.shape({
         routes: PropTypes.arrayOf(PropTypes.shape({
           key: PropTypes.string.isRequired,
-          title: PropTypes.string.isRequired
+          title: PropTypes.string.isRequired,
+          icon: PropTypes.string.isRequired
         })).isRequired
       }).isRequired,
-      CityTab: NavigationPropTypes.navigationState.isRequired,
+      HomeTab: NavigationPropTypes.navigationState.isRequired,
       LocationTab: NavigationPropTypes.navigationState.isRequired,
-      ProfileTab: NavigationPropTypes.navigationState.isRequired
+      ProfileTab: NavigationPropTypes.navigationState.isRequired,
+      DevicesTab: NavigationPropTypes.navigationState.isRequired
     }),
     switchTab: PropTypes.func.isRequired,
     pushRoute: PropTypes.func.isRequired
