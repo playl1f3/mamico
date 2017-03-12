@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "name": "Press 31",
+      "rpm": "10",
+      "color": ""
+    },
+    {
+      "name": "Press 99",
+      "rpm": "66",
+      "color": "green"
+    },
+    {
+      "name": "Press 101",
+      "rpm": "26",
+      "color": "red"
+    }
+  ]
+}

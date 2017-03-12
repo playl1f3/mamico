@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
-import { Icon, List, ListItem, Card, Button} from 'react-native-elements';
+import {Icon, List, ListItem, Card, Button} from 'react-native-elements';
 import * as NavigationState from '../../modules/navigation/NavigationState';
+import {getDevices} from '../../services/deviceService';
 import {
   Text,
   View,
@@ -10,8 +11,10 @@ import {
 
 const HomeView = React.createClass({
   getInitialState() {
+    const devices = getDevices();
     return {
-      modalVisible: true
+      modalVisible: true,
+      devices: devices
     };
   },
   addDevices() {
@@ -27,26 +30,6 @@ const HomeView = React.createClass({
   },
 
   render() {
-    const list = [
-      {
-        name: 'Press 45',
-        subtitle: 'Speed: 0 SPM',
-        icon: 'local-laundry-service',
-        color: ''
-      },
-      {
-        name: 'Press 88',
-        subtitle: 'Speed: 45 SPM',
-        icon: 'local-laundry-service',
-        color: 'red'
-      },
-      {
-        name: 'Press 100',
-        subtitle: 'Speed: 130 SPM',
-        icon: 'local-laundry-service',
-        color: 'green'
-      }
-    ];
 
     return (
       <View>
@@ -84,17 +67,18 @@ const HomeView = React.createClass({
 
         <List containerStyle={{marginBottom: 20, marginTop: 2}}>
           {
-            list.map((l, i) => (
+            this.state.devices.data.map((device, i) => (
               <ListItem
-                title={l.name}
+                title={device.name}
                 key={i}
-                subtitle={l.subtitle}
+                subtitle={'Speed: ' + device.rpm + ' SPM'}
                 hideChevron
-                leftIcon={{name: l.icon, color: l.color}}
+                leftIcon={{name: 'local-laundry-service', color: device.color}}
               />
             ))
           }
         </List>
+
       </View>
     );
   }
